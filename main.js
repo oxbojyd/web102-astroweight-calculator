@@ -12,7 +12,41 @@ var planets = [
     ['Mercury', 0.377], 
     ['Sun', 27.9] 
 ];
+document.addEventListener('DOMContentLoaded', function(){
+    var planetDropdown = document.getElementById('planets');
+    for (let i = planets.length - 1; i >= 0; i--) {
+        let option = document.createElement('option');
+        option.textContent = planets[i][0];
+        option.value = i;
+        planetDropdown.appendChild(option);
+    }
+});
 
+function calculateWeight(userWeight, planetIndex) { 
+    let weight = planets[planetIndex][1];
+    return userWeight * weight;
+}
+
+function handleClickEvent() {
+    let userWeight = parseFloat(document.getElementById('user-weight').value);
+    let planetIndex = parseInt(document.getElementById('planets').value);
+    let result = calculateWeight(userWeight, planetIndex);
+    // if (result % 1 === 0) {
+    //     result = result.toFixed(0);  // No decimal and trailing zeros for whole numbers
+    // } else {
+    //     result = result.toFixed(2);  // Keep two decimal places for non-whole numbers
+    // }
+    document.getElementById('output').textContent = `Your weight on ${planets[planetIndex][0]} is ${result.toFixed(2)}lbs.`;
+}
+
+document.getElementById('calculate-button').addEventListener('click', handleClickEvent);
+
+
+// planets.reverse(planets).forEach((planet) => {
+//     const options = document.createElement('option'); 
+//     options.textContent = planet[0];
+//     document.getElementById('planets').appendChild(options);
+// });
     // We are going to solve this by breaking the problem into three parts. 
     // Programmers like automating things, we'll populate the HTML drop down options using code, 
     // instead of having to type out all the values. 
@@ -24,37 +58,29 @@ var planets = [
     // Use the following built-in methods: 
     // `.forEach` `document.createElement` `document.getElementById` `.appendChild` 
 
-    document.addEventListener('DOMContentLoaded', function(){
-        var planets = [ 
-            ['Pluto', 0.06], 
-            ['Neptune', 1.148], 
-            ['Uranus', 0.917], 
-            ['Saturn', 1.139], 
-            ['Jupiter', 2.640], 
-            ['Mars', 0.3895], 
-            ['Moon', 0.1655], 
-            ['Earth', 1], 
-            ['Venus', 0.9032], 
-            ['Mercury', 0.377], 
-            ['Sun', 27.9] 
-        ]
-        let planets = require('C:\Users\oxboj_4c9bpag\project_calc\web102-astroweight-calculator\test\expected-planets.js');
-        let planetDropdown = document.getElementById('planets');
-        planets.array.forEach((planet, index) => {
-            let option = document.createElement('option');
-            option.textContent=planet[0];
-            option.value=index;
-            planetDropdown.appendChild(optional);
-        });
+    // document.addEventListener('DOMContentLoaded', function(){
+    //     var planets = require('C:\Users\oxboj_4c9bpag\project_calc\web102-astroweight-calculator\test\expected-planets.js');
+    //     let planetDropdown = document.getElementById('planets');
+    //     planets.forEach((planet, index) => {
+    //         let option = document.createElement('option');
+    //         option.textContent=planet[0];
+    //         option.value=index;
+    //         planetDropdown.appendChild(option);
+    //     });
 
-    })
+    // })
 
 
-function calculateWeight(weight, planetName) { 
-    // 2. Write the code to return the correct weight 
-
-} 
-function handleClickEvent(e) {
+// function calculateWeight(weight, planetName) { 
+//     // 2. Write the code to return the correct weight
+//     let weight = planets[1]
+//     let planetName= planets[0]
+//     for (let i = 0; i>=weight.length; i++) 
+//     {
+//        let addedWeight = weight *= document.getElementById('user-weight');
+//     }
+// } 
+// function handleClickEvent(e) {
     // 3. Declare a variable called userWeight and assign the value of the user's weight. 
 
     // 4. Delcare a variable called planetName and assign the name of the selected planet from the drop down. 
@@ -63,7 +89,7 @@ function handleClickEvent(e) {
 
     // 6. Write code to display the message shown in the screenshot. 
 
-} 
+// } 
 
     // 7. Set the #calculate-button element's onclick method to use the handleClickEvent function.
 
