@@ -36,7 +36,7 @@ function handleClickEvent() {
     // } else {
     //     result = result.toFixed(2);  // Keep two decimal places for non-whole numbers
     // }
-    document.getElementById('output').textContent = `Your weight on ${planets[planetIndex][0]} is ${result.toFixed(2)}lbs.`;
+    document.getElementById('output').textContent = `If you were on ${planets[planetIndex][0]}, you would weigh ${result.toFixed(2)}lbs!`;
 }
 
 document.getElementById('calculate-button').addEventListener('click', handleClickEvent);
