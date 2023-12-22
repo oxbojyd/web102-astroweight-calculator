@@ -1,8 +1,11 @@
 /* Set the background color of the page to nardo gray */
 body {
     background-image: url(img/scale.jpg);
-    background-size:contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position:center;
+    background-position-x: center;
+    background-position-y:center;
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
   }

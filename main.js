@@ -17,30 +17,37 @@ var planets = [
     for (let i = planets.length - 1; i >= 0; i--) {
         let option = document.createElement('option');
         option.textContent = planets[i][0];
-        option.value = i;
+        option.value = planets[i][0];
         planetDropdown.appendChild(option);
     }
 
 
-function calculateWeight(userWeight, planetIndex) { 
-    let weight = planets[planetIndex][1];
-    console.log(weight);
-    console.log(userWeight);
-    return userWeight * weight;
+function calculateWeight(userWeight, planet) { 
+     for (let i = 0; i < planets.length; i++) {
+        if (planet==planets[i][0]){ 
+            return userWeight * planets[i][1];
+
+        } 
+   }
 }
 
 function handleClickEvent() {
     let userWeight = parseFloat(document.getElementById('user-weight').value);
-    let planetIndex = parseInt(document.getElementById('planets').value);
-    let result = calculateWeight(userWeight, planetIndex);
+    let planet = document.getElementById('planets').value;
+    let result = calculateWeight(userWeight, planet);
 
-document.querySelector('#output').innerHTML = `If you were on ${planets[planetIndex][0]}, you would weigh ${result.toFixed(2)}lbs!`;
+document.querySelector('#output').innerHTML = `If you were on ${planet}, you would weigh ${Number(result.toFixed(2))}lbs!`;
   
 }
 
 document.querySelector('#calculate-button').addEventListener('click', handleClickEvent);
 
-
+// function calculateWeight(weight, planetName) { 
+//     const selectedPlanet = planets.find(planet => planet[0] === planetName);
+//     if (selectedPlanet) {
+//         const newWeight = selectedPlanet[1] * weight;
+//         return newWeight;
+//     }
 // planets.reverse(planets).forEach((planet) => {
 //     const options = document.createElement('option'); 
 //     options.textContent = planet[0];
