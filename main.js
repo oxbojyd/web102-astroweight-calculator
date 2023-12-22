@@ -1,4 +1,4 @@
-// Write your JavaScript code here!
+
 var planets = [ 
     ['Pluto', 0.06], 
     ['Neptune', 1.148], 
@@ -12,7 +12,7 @@ var planets = [
     ['Mercury', 0.377], 
     ['Sun', 27.9] 
 ];
-document.addEventListener('DOMContentLoaded', function(){
+
     var planetDropdown = document.getElementById('planets');
     for (let i = planets.length - 1; i >= 0; i--) {
         let option = document.createElement('option');
@@ -20,10 +20,12 @@ document.addEventListener('DOMContentLoaded', function(){
         option.value = i;
         planetDropdown.appendChild(option);
     }
-});
+
 
 function calculateWeight(userWeight, planetIndex) { 
     let weight = planets[planetIndex][1];
+    console.log(weight);
+    console.log(userWeight);
     return userWeight * weight;
 }
 
@@ -31,15 +33,12 @@ function handleClickEvent() {
     let userWeight = parseFloat(document.getElementById('user-weight').value);
     let planetIndex = parseInt(document.getElementById('planets').value);
     let result = calculateWeight(userWeight, planetIndex);
-    // if (result % 1 === 0) {
-    //     result = result.toFixed(0);  // No decimal and trailing zeros for whole numbers
-    // } else {
-    //     result = result.toFixed(2);  // Keep two decimal places for non-whole numbers
-    // }
-    document.getElementById('output').textContent = `If you were on ${planets[planetIndex][0]}, you would weigh ${result.toFixed(2)}lbs!`;
+
+document.querySelector('#output').innerHTML = `If you were on ${planets[planetIndex][0]}, you would weigh ${result.toFixed(2)}lbs!`;
+  
 }
 
-document.getElementById('calculate-button').addEventListener('click', handleClickEvent);
+document.querySelector('#calculate-button').addEventListener('click', handleClickEvent);
 
 
 // planets.reverse(planets).forEach((planet) => {
