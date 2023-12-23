@@ -30,6 +30,7 @@ function calculateWeight(userWeight, planet) {
         } 
    }
 }
+//for the people
 
 function handleClickEvent() {
     let userWeight = parseFloat(document.getElementById('user-weight').value);
