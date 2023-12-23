@@ -1,19 +1,29 @@
 /* Set the background color of the page to nardo gray */
+html {
+  background: url(img/mtnc.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#md{
+ font-family: bangers 
+}
 body {
-    background-image: url(img/scale.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-    background-position-x: center;
-    background-position-y:center;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    /* background-image: url(img/mtnc.jpg);
+    background-size:100%;
+    height: auto;
+    width: auto;
+    background-repeat:no-repeat ;
+    background-position: top center;
+    margin: auto; /* Remove default margin */
+    /* padding-top: auto; Remove default padding */ */
   }
   
   /* Style buttons and inputs with a medium blue background and light text */
   button, input, #user-weight::placeholder {
     background-color: #17a02e; /* Medium Blue */
-    color: #181313; /* Light Text */
+    color: #131814; /* Light Text */
     padding: 10px; /* Add padding for better appearance */
     border: none; /* Remove default borders */
     border-radius: 5px; /* Add rounded corners */
@@ -22,21 +32,15 @@ body {
   
   /* Style the output with bubble text */
   #output {
-    background-color: #7d7880; /* Light Gray */
+    background-color: #2da33b; /* Light Gray */
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px; /* Add margin for spacing */
   }
   
-  /* .img-scale {
-    width: 564px;
-    height: 956px;
-    background-image: url(img/scale.jpg);
-    background-size: contain;
-  } */
   /* Style the page title to look serious and dark */
   h1 {
-    color: #3a8110; /* Dark Gray */
+    color: #2da33b; /* Dark Gray */
     text-align: center; /* Center the title */
   }
   

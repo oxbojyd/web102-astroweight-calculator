@@ -25,7 +25,7 @@ var planets = [
 function calculateWeight(userWeight, planet) { 
      for (let i = 0; i < planets.length; i++) {
         if (planet==planets[i][0]){ 
-            return userWeight * planets[i][1];
+            return (userWeight/2.31) * planets[i][1];
 
         } 
    }
@@ -37,7 +37,7 @@ function handleClickEvent() {
     let planet = document.getElementById('planets').value;
     let result = calculateWeight(userWeight, planet);
 
-document.querySelector('#output').innerHTML = `If you were on ${planet}, you would weigh ${Number(result.toFixed(2))}lbs!`;
+document.querySelector('#output').innerHTML = `If you were on ${planet}, you would weigh ${Number(result.toFixed(2))} liters of Mountain Dew!`;
   
 }
 
