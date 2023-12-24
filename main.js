@@ -37,7 +37,7 @@ function handleClickEvent() {
     let planet = document.getElementById('planets').value;
     let result = calculateWeight(userWeight, planet);
 
-document.querySelector('#output').innerHTML = `If you were on ${planet}, you would weigh ${Number(result.toFixed(2))} liters of Mountain Dew!`;
+document.querySelector('#output').innerHTML = `If you were on ${planet}, you would weigh ${Number(result.toFixed(2))} Delicious liters of Nutritious Mountain Dew!`;
   
 }
 

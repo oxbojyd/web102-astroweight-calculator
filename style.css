@@ -22,8 +22,8 @@ body {
   
   /* Style buttons and inputs with a medium blue background and light text */
   button, input, #user-weight::placeholder {
-    background-color: #17a02e; /* Medium Blue */
-    color: #131814; /* Light Text */
+    background-color: #17a02e; /* Defaults to img */
+    color: #131814; /* Black Text */
     padding: 10px; /* Add padding for better appearance */
     border: none; /* Remove default borders */
     border-radius: 5px; /* Add rounded corners */
@@ -36,13 +36,28 @@ body {
     padding: 10px;
     border-radius: 5px;
     margin-top: 10px; /* Add margin for spacing */
+    width:fit-content;
+   
   }
   
   /* Style the page title to look serious and dark */
   h1 {
-    color: #2da33b; /* Dark Gray */
+    color:green; /* Dark Gray */
     text-align: center; /* Center the title */
+    border-color:#131814;
+    background-color: greenyellow;
+    width:fit-content;
+    margin: 0 auto;
   }
-  
-  /* Add more styles as needed */
-  
+  #slogan{
+    padding:10px;
+    color:greenyellow;
+    font-size:20px;
+    
+  }
+  #sale{
+    padding:10px;
+    color:greenyellow;
+    font-size:20px;
+    text-decoration:wavy;
+  }
