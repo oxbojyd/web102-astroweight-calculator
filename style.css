@@ -1,4 +1,4 @@
-/* Set the background color of the page to nardo gray */
+
 html {
   background: url(img/mtnc.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -9,41 +9,30 @@ html {
 #md{
  font-family: bangers 
 }
-body {
-    /* background-image: url(img/mtnc.jpg);
-    background-size:100%;
-    height: auto;
-    width: auto;
-    background-repeat:no-repeat ;
-    background-position: top center;
-    margin: auto; /* Remove default margin */
-    /* padding-top: auto; Remove default padding */ */
-  }
-  
-  /* Style buttons and inputs with a medium blue background and light text */
+ 
   button, input, #user-weight::placeholder {
-    background-color: #17a02e; /* Defaults to img */
-    color: #131814; /* Black Text */
-    padding: 10px; /* Add padding for better appearance */
-    border: none; /* Remove default borders */
-    border-radius: 5px; /* Add rounded corners */
-    margin: 5px; /* Add margin for spacing */
+    background-color: #17a02e; 
+    color: #131814; 
+    padding: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    margin: 5px; 
   }
   
-  /* Style the output with bubble text */
+ 
   #output {
-    background-color: #2da33b; /* Light Gray */
+    background-color: #2da33b; 
     padding: 10px;
     border-radius: 5px;
-    margin-top: 10px; /* Add margin for spacing */
+    margin-top: 10px;
     width:fit-content;
    
   }
   
-  /* Style the page title to look serious and dark */
+  
   h1 {
-    color:green; /* Dark Gray */
-    text-align: center; /* Center the title */
+    color:green; 
+    text-align: center;
     border-color:#131814;
     background-color: greenyellow;
     width:fit-content;
