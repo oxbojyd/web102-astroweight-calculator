@@ -1,4 +1,3 @@
-/* Set the background color of the page to nardo gray */
 body {
     background-image: url(img/scale.jpg);
     background-size: cover;
@@ -6,39 +5,28 @@ body {
     background-position:center;
     background-position-x: center;
     background-position-y:center;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    margin: 0; 
+    padding: 0; 
   }
   
-  /* Style buttons and inputs with a medium blue background and light text */
   button, input, #user-weight::placeholder {
-    background-color: #17a02e; /* Medium Blue */
-    color: #181313; /* Light Text */
-    padding: 10px; /* Add padding for better appearance */
-    border: none; /* Remove default borders */
-    border-radius: 5px; /* Add rounded corners */
-    margin: 5px; /* Add margin for spacing */
+    background-color: #17a02e;
+    color: #181313; 
+    padding: 10px; /
+    border: none; /
+    border-radius: 5px; 
+    margin: 5px; /
   }
   
-  /* Style the output with bubble text */
   #output {
-    background-color: #7d7880; /* Light Gray */
+    background-color: #7d7880;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 10px; /* Add margin for spacing */
-  }
+    margin-top: 10px; 
   
-  /* .img-scale {
-    width: 564px;
-    height: 956px;
-    background-image: url(img/scale.jpg);
-    background-size: contain;
-  } */
-  /* Style the page title to look serious and dark */
   h1 {
-    color: #3a8110; /* Dark Gray */
-    text-align: center; /* Center the title */
+    color: #3a8110;
+    text-align: center;
   }
-  
-  /* Add more styles as needed */
+}
   
